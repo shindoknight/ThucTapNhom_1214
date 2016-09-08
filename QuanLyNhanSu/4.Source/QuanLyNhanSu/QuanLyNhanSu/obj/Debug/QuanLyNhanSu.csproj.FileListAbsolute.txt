@@ -10,3 +10,6 @@ D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\QuanLyNhanSu\obj\Debu
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\New folder\4.Source\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\New folder\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\New folder\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
