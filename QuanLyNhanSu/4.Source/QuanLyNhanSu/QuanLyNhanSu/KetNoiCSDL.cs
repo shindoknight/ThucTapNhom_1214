@@ -15,7 +15,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string strConnect = @"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True";
+                string strConnect = @"Data Source=.;Initial Catalog=QUANLYNHANSU;Integrated Security=True";
                 con = new SqlConnection(strConnect);
                 con.Open();
             }
