@@ -20,6 +20,9 @@ D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormThem.resources
+C:\Users\HienHD\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+C:\Users\HienHD\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+C:\Users\HienHD\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
@@ -30,3 +33,4 @@ E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\D
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormThem.resources
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
+E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormXoa.resources
