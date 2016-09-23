@@ -42,5 +42,12 @@ namespace QuanLyNhanSu
             this.Hide();
             frmXoa.ShowDialog();
         }
+
+        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSua1 frmForm_Sua = new FormSua1();
+            //  this.Close();
+            frmForm_Sua.Show();
+        }
     }
 }
