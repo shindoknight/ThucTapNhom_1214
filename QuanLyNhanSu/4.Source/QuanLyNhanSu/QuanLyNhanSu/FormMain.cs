@@ -20,7 +20,23 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
         }
-
+        public FormMain(int n)
+        {
+            InitializeComponent();
+            switch(n)
+            {
+                case 1: break;
+                case 2:
+                    menuthem.Visible = false;
+                    menuxoa.Visible = false;
+                    break;
+                case 3:
+                    menuthem.Visible = false;
+                    menuxoa.Visible = false;
+                    menusua.Visible = false;
+                    break;
+            }
+        }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -34,7 +50,7 @@ namespace QuanLyNhanSu
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
 
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
