@@ -44,6 +44,7 @@ namespace QuanLyNhanSu
             frmXoa.ShowDialog();
         }
 
+
         private void TK_Manv_TextChanged(object sender, EventArgs e)
         {
             s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and MaNV like '%" + TK_Manv.Text + "%'";
@@ -80,5 +81,13 @@ namespace QuanLyNhanSu
             dgvNhanVien.DataSource = _con.GetTable(s);
         }
         
+
+        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSua1 frmForm_Sua = new FormSua1();
+            //  this.Close();
+            frmForm_Sua.Show();
+        }
+
     }
 }
