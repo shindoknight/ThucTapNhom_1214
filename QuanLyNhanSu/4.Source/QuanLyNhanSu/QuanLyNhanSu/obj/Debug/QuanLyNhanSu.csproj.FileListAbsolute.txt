@@ -34,5 +34,22 @@ E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\D
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
 E:\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormXoa.resources
+<<<<<<< HEAD
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormXoa.resources
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLogin.resources
+=======
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormMain.resources
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormThem.resources
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormXoa.resources
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormSua1.resources
+D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormSua1.resources
+D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormXoa.resources
+>>>>>>> master

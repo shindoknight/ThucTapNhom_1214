@@ -15,6 +15,7 @@ namespace QuanLyNhanSu
         KetNoiCSDL _con = new KetNoiCSDL();
         FormThem frmThem = new FormThem();
         FormXoa frmXoa = new FormXoa();
+        string s;
 
         public FormMain()
         {
@@ -63,9 +64,57 @@ namespace QuanLyNhanSu
             frmXoa.ShowDialog();
         }
 
+<<<<<<< HEAD:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/FormMain.cs
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
+=======
+
+        private void TK_Manv_TextChanged(object sender, EventArgs e)
+        {
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and MaNV like '%" + TK_Manv.Text + "%'";
+            dgvNhanVien.DataSource = _con.GetTable(s);
+        }
+
+        private void TK_Hoten_TextChanged(object sender, EventArgs e)
+        {
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and TenNV like '%" + TK_Hoten.Text + "%'";
+            dgvNhanVien.DataSource = _con.GetTable(s);
+        }
+
+        private void TK_NgSinh_TextChanged(object sender, EventArgs e)
+        {
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and NgaySinh like '%" + TK_NgSinh.Text + "%'";
+            dgvNhanVien.DataSource = _con.GetTable(s);
+        }
+
+        private void TK_Diachi_TextChanged(object sender, EventArgs e)
+        {
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and DChi like '%" + TK_Diachi.Text + "%'";
+            dgvNhanVien.DataSource = _con.GetTable(s);
+        }
+
+        private void TK_Luong_TextChanged(object sender, EventArgs e)
+        {
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and luong like '%" + TK_Luong.Text + "%'";
+            dgvNhanVien.DataSource = _con.GetTable(s);
+        }
+
+        private void TK_PhongBan_TextChanged(object sender, EventArgs e)
+        {
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and Tenpb like '%" + TK_PhongBan.Text + "%'";
+            dgvNhanVien.DataSource = _con.GetTable(s);
+        }
+        
+
+        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSua1 frmForm_Sua = new FormSua1();
+            //  this.Close();
+            frmForm_Sua.Show();
+        }
+
+>>>>>>> master:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/Form1.cs
     }
 }
