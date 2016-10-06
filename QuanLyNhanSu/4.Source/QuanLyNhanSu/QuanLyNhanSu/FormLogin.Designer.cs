@@ -60,14 +60,16 @@
             this.txtID.Location = new System.Drawing.Point(166, 44);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(132, 20);
-            this.txtID.TabIndex = 1;
+            this.txtID.TabIndex = 0;
             // 
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(166, 81);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(132, 20);
             this.txtPass.TabIndex = 1;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnDangNhap
             // 
@@ -87,6 +89,7 @@
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label3
             // 
@@ -100,8 +103,10 @@
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnXoa;
             this.ClientSize = new System.Drawing.Size(396, 155);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnDangNhap);

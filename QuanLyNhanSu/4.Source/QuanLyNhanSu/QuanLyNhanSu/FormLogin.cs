@@ -35,5 +35,11 @@ namespace QuanLyNhanSu
             }
            // this.Close();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            txtPass.Text = "";
+        }
     }
 }

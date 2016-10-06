@@ -29,11 +29,15 @@ namespace QuanLyNhanSu
                 case 2:
                     menuthem.Visible = false;
                     menuxoa.Visible = false;
+                    menuthemuser.Visible = false;
+                    menuxoauser.Visible = false;
                     break;
                 case 3:
                     menuthem.Visible = false;
                     menuxoa.Visible = false;
                     menusua.Visible = false;
+                    menuthemuser.Visible = false;
+                    menuxoauser.Visible = false;
                     break;
             }
         }
@@ -57,6 +61,11 @@ namespace QuanLyNhanSu
         {
             this.Hide();
             frmXoa.ShowDialog();
+        }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
