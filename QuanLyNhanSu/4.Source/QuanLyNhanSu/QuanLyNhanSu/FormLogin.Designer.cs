@@ -66,6 +66,7 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(166, 81);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(132, 20);
             this.txtPass.TabIndex = 1;
             this.txtPass.UseSystemPasswordChar = true;
@@ -82,6 +83,7 @@
             // 
             // btnThoat
             // 
+<<<<<<< HEAD
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(223, 120);
             this.btnThoat.Name = "btnThoat";
@@ -90,6 +92,15 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+=======
+            this.btnXoa.Location = new System.Drawing.Point(223, 120);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+>>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
             // 
             // label3
             // 
@@ -106,7 +117,11 @@
             this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.CancelButton = this.btnThoat;
+=======
+            this.CancelButton = this.btnXoa;
+>>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
             this.ClientSize = new System.Drawing.Size(396, 155);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);

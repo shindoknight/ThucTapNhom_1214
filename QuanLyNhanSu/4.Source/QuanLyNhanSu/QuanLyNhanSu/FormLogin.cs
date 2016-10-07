@@ -37,6 +37,7 @@ namespace QuanLyNhanSu
             }
            // this.Close();
         }
+<<<<<<< HEAD
         private void frmMain_closed(object sender, FormClosedEventArgs e)
         {
             this.Show();
@@ -48,6 +49,13 @@ namespace QuanLyNhanSu
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+=======
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            txtPass.Text = "";
+>>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
         }
     }
 }
