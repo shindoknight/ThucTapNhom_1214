@@ -15,14 +15,15 @@ namespace QuanLyNhanSu
         KetNoiCSDL _con = new KetNoiCSDL();
         FormThem frmThem = new FormThem();
         FormXoa frmXoa = new FormXoa();
-
+        string strID;
         public FormMain()
         {
             InitializeComponent();
         }
-        public FormMain(int n)
+        public FormMain(int n,string id)
         {
             InitializeComponent();
+            strID = id;
             switch(n)
             {
                 case 1: break;
@@ -65,12 +66,12 @@ namespace QuanLyNhanSu
 
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+          //  Application.Exit();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

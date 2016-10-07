@@ -24,9 +24,11 @@ namespace QuanLyNhanSu
             if(_conn.Login(str)==true)
             {
                 this.Hide();
-                string a;
+                string a,b;
                 a=_conn.GetTable(str).Rows[0]["capdo"].ToString();
-                FormMain frmMain = new FormMain(int.Parse(a));
+                b = _conn.GetTable(str).Rows[0]["ID"].ToString();
+                FormMain frmMain = new FormMain(int.Parse(a),b);    
+                frmMain.FormClosed += new FormClosedEventHandler(frmMain_closed);
                 frmMain.Show();
             }
             else
@@ -34,6 +36,18 @@ namespace QuanLyNhanSu
                 MessageBox.Show("Đăng nhập không thành công!");
             }
            // this.Close();
+        }
+        private void frmMain_closed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+            txtID.Text = "";
+            txtPass.Text = "";
+            txtID.Focus();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
