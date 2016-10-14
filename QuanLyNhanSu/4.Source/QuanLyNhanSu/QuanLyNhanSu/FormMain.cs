@@ -15,12 +15,9 @@ namespace QuanLyNhanSu
         KetNoiCSDL _con = new KetNoiCSDL();
         FormThem frmThem = new FormThem();
         FormXoa frmXoa = new FormXoa();
-<<<<<<< HEAD
         string strID;
-=======
         string s;
 
->>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
         public FormMain()
         {
             InitializeComponent();
@@ -69,7 +66,6 @@ namespace QuanLyNhanSu
             frmXoa.ShowDialog();
         }
 
-<<<<<<< HEAD
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
           //  Application.Exit();
@@ -79,13 +75,10 @@ namespace QuanLyNhanSu
         {
             this.Close();
         }
-=======
-<<<<<<< HEAD:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/FormMain.cs
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-=======
 
         private void TK_Manv_TextChanged(object sender, EventArgs e)
         {
@@ -131,7 +124,6 @@ namespace QuanLyNhanSu
             frmForm_Sua.Show();
         }
 
->>>>>>> master:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/Form1.cs
->>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
+
     }
 }

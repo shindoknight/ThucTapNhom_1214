@@ -51,21 +51,18 @@
             this.clmDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-<<<<<<< HEAD
+
             this.ngườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuthemuser = new System.Windows.Forms.ToolStripMenuItem();
             this.menusuauser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuxoauser = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-=======
-<<<<<<< HEAD:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/FormMain.Designer.cs
+
             this.ngườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuthemuser = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaThôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuxoauser = new System.Windows.Forms.ToolStripMenuItem();
-=======
->>>>>>> master:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/Form1.Designer.cs
->>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
+
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -97,44 +94,38 @@
             // 
             // menuthem
             // 
-<<<<<<< HEAD:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/FormMain.Designer.cs
+
             this.menuthem.Name = "menuthem";
             this.menuthem.Size = new System.Drawing.Size(105, 22);
             this.menuthem.Text = "Thêm";
             this.menuthem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
-=======
+
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
             this.thêmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.thêmToolStripMenuItem.Text = "Thêm";
             this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
->>>>>>> master:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/Form1.Designer.cs
+
             // 
             // menusua
             // 
-<<<<<<< HEAD:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/FormMain.Designer.cs
             this.menusua.Name = "menusua";
             this.menusua.Size = new System.Drawing.Size(105, 22);
             this.menusua.Text = "Sửa";
-=======
             this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
             this.sửaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sửaToolStripMenuItem.Text = "Sửa";
             this.sửaToolStripMenuItem.Click += new System.EventHandler(this.sửaToolStripMenuItem_Click);
->>>>>>> master:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/Form1.Designer.cs
             // 
             // menuxoa
             // 
-<<<<<<< HEAD:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/FormMain.Designer.cs
             this.menuxoa.Name = "menuxoa";
             this.menuxoa.Size = new System.Drawing.Size(105, 22);
             this.menuxoa.Text = "Xóa";
             this.menuxoa.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
-=======
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
             this.xóaToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
->>>>>>> master:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/Form1.Designer.cs
             // 
             // tìmKiếmToolStripMenuItem
             // 
@@ -288,22 +279,19 @@
             this.clmPB.HeaderText = "Phòng Ban";
             this.clmPB.Name = "clmPB";
             // 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/FormMain.Designer.cs
->>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
+
             // ngườiDùngToolStripMenuItem
             // 
             this.ngườiDùngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuthemuser,
-<<<<<<< HEAD
+
             this.menusuauser,
             this.menuxoauser,
             this.đăngXuấtToolStripMenuItem});
-=======
+
             this.sửaThôngTinToolStripMenuItem,
             this.menuxoauser});
->>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
+
             this.ngườiDùngToolStripMenuItem.Name = "ngườiDùngToolStripMenuItem";
             this.ngườiDùngToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.ngườiDùngToolStripMenuItem.Text = "Người dùng";
@@ -311,7 +299,7 @@
             // menuthemuser
             // 
             this.menuthemuser.Name = "menuthemuser";
-<<<<<<< HEAD
+
             this.menuthemuser.Size = new System.Drawing.Size(170, 22);
             this.menuthemuser.Text = "Thêm người dùng";
             // 
@@ -320,7 +308,7 @@
             this.menusuauser.Name = "menusuauser";
             this.menusuauser.Size = new System.Drawing.Size(170, 22);
             this.menusuauser.Text = "Sửa thông tin";
-=======
+
             this.menuthemuser.Size = new System.Drawing.Size(194, 22);
             this.menuthemuser.Text = "Thêm người dùng mới";
             // 
@@ -329,12 +317,12 @@
             this.sửaThôngTinToolStripMenuItem.Name = "sửaThôngTinToolStripMenuItem";
             this.sửaThôngTinToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.sửaThôngTinToolStripMenuItem.Text = "Sửa thông tin";
->>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
+
             // 
             // menuxoauser
             // 
             this.menuxoauser.Name = "menuxoauser";
-<<<<<<< HEAD
+
             this.menuxoauser.Size = new System.Drawing.Size(170, 22);
             this.menuxoauser.Text = "Xóa người dùng";
             // 
@@ -345,13 +333,11 @@
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
-=======
+
             this.menuxoauser.Size = new System.Drawing.Size(194, 22);
             this.menuxoauser.Text = "Xóa người dùng";
             // 
-=======
->>>>>>> master:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/Form1.Designer.cs
->>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
+
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,21 +386,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPB;
-<<<<<<< HEAD:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/FormMain.Designer.cs
         public System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ngườiDùngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuthemuser;
-<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem menusuauser;
         private System.Windows.Forms.ToolStripMenuItem menuxoauser;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-=======
         private System.Windows.Forms.ToolStripMenuItem sửaThôngTinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuxoauser;
-=======
->>>>>>> master:QuanLyNhanSu/4.Source/QuanLyNhanSu/QuanLyNhanSu/Form1.Designer.cs
->>>>>>> 47cf08db8b677a39d8f45c60006acb6a7b1c9002
+
     }
 }
 

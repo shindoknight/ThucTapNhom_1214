@@ -51,5 +51,4 @@ C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\Q
 C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
 C:\Users\Hiếu Học\Documents\GitHub\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormSua1.resources
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormSua1.resources
-D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormXoa.resources
 >>>>>>> master
