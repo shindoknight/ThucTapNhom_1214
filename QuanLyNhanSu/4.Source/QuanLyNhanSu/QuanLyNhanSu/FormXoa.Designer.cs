@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnOK);
             this.Name = "FormXoa";
             this.Text = "FormXoa";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormXoa_FormClosed);
             this.Load += new System.EventHandler(this.FormXoa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

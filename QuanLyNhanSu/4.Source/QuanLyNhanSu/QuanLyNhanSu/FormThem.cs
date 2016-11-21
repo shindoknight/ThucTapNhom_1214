@@ -72,9 +72,7 @@ namespace QuanLyNhanSu
             if(txtMaNV != null && txtHoTen != null)
             {
                 this.Close();
-                FormMain frmmain = new FormMain();
-                frmmain.dgvNhanVien.DataSource =_con.Them_NV(txtMaNV.Text,txtHoTen.Text,txtDiaChi.Text,dateTimePicker1.Value.ToString(),txtLuong.Text,cmbPhongBan.Text);
-                frmmain.Show();
+                
             }
         }
     }

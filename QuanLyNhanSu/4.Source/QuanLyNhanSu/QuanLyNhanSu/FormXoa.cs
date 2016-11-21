@@ -26,10 +26,16 @@ namespace QuanLyNhanSu
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            FormMain frmmain = new FormMain();
-            string str = cmbMaNV.Text.Trim();
-            frmmain.dgvNhanVien.DataSource = _con.Xoa_NV(str);
-            frmmain.Show();
+
+            DialogResult dlrXoa;
+            dlrXoa = MessageBox.Show("Bạn chắc chắn muốn xóa?", "Xóa học sinh", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dlrXoa == DialogResult.OK)
+            {
+                
+                string str = cmbMaNV.Text.Trim();
+                 _con.Xoa_NV(str);
+            }
+            
         }
 
         private void FormXoa_Load(object sender, EventArgs e)
@@ -40,6 +46,11 @@ namespace QuanLyNhanSu
             cmbMaNV.DataSource = dtb;
             cmbMaNV.ValueMember = "MaNV";
             cmbMaNV.DisplayMember = "MaNV";
+        }
+
+        private void FormXoa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }
