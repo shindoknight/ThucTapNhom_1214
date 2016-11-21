@@ -206,6 +206,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormThem";
             this.Text = "Thêm Nhân Sự";
+          //  this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormThem_FormClosed);
             this.Load += new System.EventHandler(this.FormThem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

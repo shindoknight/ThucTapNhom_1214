@@ -154,7 +154,7 @@ namespace QuanLyNhanSu
                    }
                    catch (SqlException ex)
                    {
-                      MessageBox.Show("Bạn sửa bị lỗi rồi!");
+                      MessageBox.Show("Bạn sửa bị lỗi rồi!\n"+ex.ToString());
                    }
                 }
         }
@@ -181,7 +181,7 @@ namespace QuanLyNhanSu
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Lỗi rồi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Lỗi rồi!\n"+ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

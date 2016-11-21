@@ -15,35 +15,62 @@ namespace QuanLyNhanSu
         KetNoiCSDL _con = new KetNoiCSDL();
         FormThem frmThem = new FormThem();
         FormXoa frmXoa = new FormXoa();
+        string strID;
         string s;
-
         public FormMain()
         {
             InitializeComponent();
         }
-
+        public FormMain(int n, string id)
+        {
+            InitializeComponent();
+            strID = id;
+            switch (n)
+            {
+                case 1: break;
+                case 2:
+                    menuthem.Visible = false;
+                    menuxoa.Visible = false;
+                   // menuthemuser.Visible = false;
+                    //menuxoauser.Visible = false;
+                    break;
+                case 3:
+                    menuthem.Visible = false;
+                    menuxoa.Visible = false;
+                    menusua.Visible = false;
+                   // menuthemuser.Visible = false;
+                   // menuxoauser.Visible = false;
+                    break;
+            }
+        }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           // this.Hide();
             frmThem.ShowDialog();
         }
-
         private void FormMain_Load(object sender, EventArgs e)
         {
             dgvNhanVien.DataSource = _con.GetTable("select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB");
         }
-
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
 
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             frmXoa.ShowDialog();
         }
 
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           // Application.Exit();
+        }
 
         private void TK_Manv_TextChanged(object sender, EventArgs e)
         {
@@ -80,8 +107,6 @@ namespace QuanLyNhanSu
             s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and Tenpb like '%" + TK_PhongBan.Text + "%'";
             dgvNhanVien.DataSource = _con.GetTable(s);
         }
-        
-
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormSua1 frmForm_Sua = new FormSua1();
@@ -89,5 +114,9 @@ namespace QuanLyNhanSu
             frmForm_Sua.Show();
         }
 
+        private void cậpNhậtDữLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvNhanVien.DataSource = _con.GetTable("select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB");
+        }
     }
 }

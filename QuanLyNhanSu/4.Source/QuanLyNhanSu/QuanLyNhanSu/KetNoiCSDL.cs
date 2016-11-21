@@ -86,5 +86,16 @@ namespace QuanLyNhanSu
             return dtb;
         }
 
+        public bool Login(string sql)
+        {
+            bool b;
+            OpenConnect();
+            SqlCommand cmd = new SqlCommand(sql,con);
+            SqlDataReader re = cmd.ExecuteReader();
+            b = re.Read();
+            CloseConnect();
+            return b;
+        }
+
     }
 }
