@@ -10,3 +10,6 @@ D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
+D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormUser.resources
+D:\1-Study\4-HK6\ThucTapNhom\ThucTapNhom_1214\QuanLyNhanSu\4.Source\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormThemUser.resources

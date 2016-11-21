@@ -17,6 +17,7 @@ namespace QuanLyNhanSu
         FormXoa frmXoa = new FormXoa();
         string strID;
         string s;
+        int capdo;
         public FormMain()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
             strID = id;
+            capdo = n;
             switch (n)
             {
                 case 1: break;
@@ -117,6 +119,18 @@ namespace QuanLyNhanSu
         private void cậpNhậtDữLiệuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dgvNhanVien.DataSource = _con.GetTable("select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB");
+        }
+
+        private void menuuser_Click(object sender, EventArgs e)
+        {
+            FormUser frmuser = new FormUser(capdo, strID);
+            frmuser.FormClosed += new FormClosedEventHandler(frmuser_closed);
+            frmuser.Show();
+            this.Hide();
+        }
+        private void frmuser_closed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
     }
 }

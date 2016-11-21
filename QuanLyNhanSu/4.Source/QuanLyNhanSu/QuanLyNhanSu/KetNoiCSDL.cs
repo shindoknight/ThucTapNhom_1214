@@ -96,6 +96,24 @@ namespace QuanLyNhanSu
             CloseConnect();
             return b;
         }
+        public void Exec(string sql)
+        {
+            OpenConnect();
+            try
+            {
+                SqlCommand s = new SqlCommand(sql,con);
+                if (s.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công!");
+                };
+            }
+            catch (Exception e) { MessageBox.Show(e.ToString()); }
+            CloseConnect();
+        }
 
     }
 }
