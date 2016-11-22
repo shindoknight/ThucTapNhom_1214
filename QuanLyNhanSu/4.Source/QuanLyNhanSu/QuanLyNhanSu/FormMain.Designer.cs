@@ -51,10 +51,10 @@
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cậpNhậtDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuuser = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuuser = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -154,6 +154,8 @@
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.Size = new System.Drawing.Size(879, 389);
             this.dgvNhanVien.TabIndex = 7;
+            this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
+            this.dgvNhanVien.SelectionChanged += new System.EventHandler(this.dgvNhanVien_SelectionChanged);
             // 
             // clmMaNV
             // 
@@ -251,7 +253,7 @@
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             // 
             // cậpNhậtDữLiệuToolStripMenuItem
@@ -260,6 +262,13 @@
             this.cậpNhậtDữLiệuToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.cậpNhậtDữLiệuToolStripMenuItem.Text = "Cập nhật dữ liệu";
             this.cậpNhậtDữLiệuToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtDữLiệuToolStripMenuItem_Click);
+            // 
+            // menuuser
+            // 
+            this.menuuser.Name = "menuuser";
+            this.menuuser.Size = new System.Drawing.Size(127, 20);
+            this.menuuser.Text = "Quản trị người dùng";
+            this.menuuser.Click += new System.EventHandler(this.menuuser_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -284,13 +293,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(879, 425);
             this.panel1.TabIndex = 9;
-            // 
-            // menuuser
-            // 
-            this.menuuser.Name = "menuuser";
-            this.menuuser.Size = new System.Drawing.Size(127, 20);
-            this.menuuser.Text = "Quản trị người dùng";
-            this.menuuser.Click += new System.EventHandler(this.menuuser_Click);
             // 
             // FormMain
             // 

@@ -71,8 +71,9 @@ namespace QuanLyNhanSu
         {
             if(txtMaNV != null && txtHoTen != null)
             {
+                _con.Them_NV(txtMaNV.Text, txtHoTen.Text, txtDiaChi.Text, dateTimePicker1.Text, txtLuong.Text, cmbPhongBan.Text);
+
                 this.Close();
-                
             }
         }
     }
