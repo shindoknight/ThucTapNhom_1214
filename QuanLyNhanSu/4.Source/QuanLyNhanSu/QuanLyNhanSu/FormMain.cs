@@ -14,7 +14,6 @@ namespace QuanLyNhanSu
     {
         KetNoiCSDL _con = new KetNoiCSDL();
         FormThem frmThem = new FormThem();
-        FormXoa frmXoa = new FormXoa();
         string strID;
         string s;
         int capdo;
@@ -52,6 +51,7 @@ namespace QuanLyNhanSu
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
+            menuxoa.Enabled = false;
             dgvNhanVien.DataSource = _con.GetTable("select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB");
         }
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,8 +61,14 @@ namespace QuanLyNhanSu
 
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            frmXoa.ShowDialog();
+            DialogResult dlrXoa;
+            dlrXoa = MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên " + dgvNhanVien.CurrentRow.Cells["clmHoTen"].Value.ToString()+"?", "Xóa Nhân  viên", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dlrXoa == DialogResult.OK)
+            {
+                string str = dgvNhanVien.CurrentRow.Cells["clmMaNV"].Value.ToString();
+                _con.Xoa_NV(str);
+                dgvNhanVien.DataSource = _con.GetTable("select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB");
+            }
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,6 +137,20 @@ namespace QuanLyNhanSu
         private void frmuser_closed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+        }
+
+        private void dgvNhanVien_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvNhanVien.CurrentCell.Selected = true;
+            }
+            catch { }
+        }
+
+        private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            menuxoa.Enabled = true;
         }
     }
 }

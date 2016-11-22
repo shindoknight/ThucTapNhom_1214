@@ -16,7 +16,7 @@ namespace QuanLyNhanSu
             try
             {
                 //string strConnect = @"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True";
-                string strConnect = "Data Source=.;Initial Catalog=QUANLYNHANSU;Integrated Security=True";
+                string strConnect = @"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True";
                 con = new SqlConnection(strConnect);
                 con.Open();
             }
@@ -58,32 +58,51 @@ namespace QuanLyNhanSu
             string them = "Them_NhanVien";
             SqlCommand com = new SqlCommand(them, con);
             SqlDataAdapter da = new SqlDataAdapter(com);
-            com.CommandType = CommandType.StoredProcedure;
-            com.Parameters.AddWithValue("@manv", manhanvien);
-            com.Parameters.AddWithValue("@hoten", hoten);
-            com.Parameters.AddWithValue("@diachi", diachi);
-            com.Parameters.AddWithValue("@ngaysinh", ngay);
-            com.Parameters.AddWithValue("@luong", luong);
-            com.Parameters.AddWithValue("@phongban", phongban);
-            com.ExecuteNonQuery();
-            da.Fill(dtb);
+            try
+            {
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@manv", manhanvien);
+                com.Parameters.AddWithValue("@hoten", hoten);
+                com.Parameters.AddWithValue("@diachi", diachi);
+                com.Parameters.AddWithValue("@ngaysinh", ngay);
+                com.Parameters.AddWithValue("@luong", luong);
+                com.Parameters.AddWithValue("@phongban", phongban);
+                if(com.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Thêm thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
+                da.Fill(dtb);
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối");
+            }
             CloseConnect();
             return dtb;
         }
 
-        public DataTable Xoa_NV(string manhanvien)
+        public void Xoa_NV(string manhanvien)
         {
             OpenConnect();
-            DataTable dtb = new DataTable();
             string them = "Xoa_NhanVien";
             SqlCommand com = new SqlCommand(them, con);
-            SqlDataAdapter da = new SqlDataAdapter(com);
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@manv", manhanvien);
-            com.ExecuteNonQuery();
-            da.Fill(dtb);
+            if (com.ExecuteNonQuery()>0)
+            {
+                MessageBox.Show("Xóa thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Xóa không thành công!");
+            }
+ 
             CloseConnect();
-            return dtb;
+         
         }
 
         public bool Login(string sql)
