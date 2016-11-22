@@ -88,7 +88,7 @@ namespace QuanLyNhanSu
             sqlcmd.CommandType = CommandType.StoredProcedure;
             sqlcmd.Parameters.AddWithValue("@MaNV", MaNV);
             sqlcmd.Parameters.AddWithValue("@TenNV", TenNV);
-            sqlcmd.Parameters.AddWithValue("@NgaySinh", DateTime.Parse(NgaySinh));
+            sqlcmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
             sqlcmd.Parameters.AddWithValue("@DChi", DChi);
             sqlcmd.Parameters.AddWithValue("@GTinh", GTinh);
             sqlcmd.Parameters.AddWithValue("@Luong", int.Parse(Luong));
@@ -117,7 +117,7 @@ namespace QuanLyNhanSu
                     // gọi đến hàm sửa 
                     try
                     {
-                        suaNhanvien(txtMaNV.Text, txtTenNV.Text, dTP_NgaySinh.Value.Date.ToString("dd/MM/yyyy"), txtDChi.Text, cmbGioiTinh.Text, txtLuong.Text, txtMaPB.Text, txtSoNVDuoiQuyen.Text, txtNgGS.Text);
+                        suaNhanvien(txtMaNV.Text, txtTenNV.Text, dTP_NgaySinh.Text, txtDChi.Text, cmbGioiTinh.Text, txtLuong.Text, txtMaPB.Text, txtSoNVDuoiQuyen.Text, txtNgGS.Text);
                         MessageBox.Show("Bạn đã sửa thành công");
                         if (chk_MaNV.Checked == true)
                         // goi store procedure tim theo ma( nhap vao text)
@@ -167,9 +167,9 @@ namespace QuanLyNhanSu
                 dgv_NhanVien.Columns[0].DefaultCellStyle.Format = "dd/MM/yyyy";
                 txtMaNV.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[0].Value.ToString();
                 txtTenNV.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[1].Value.ToString();
-                int dd = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(0, 2));
-                int MM = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(3, 2));
-                int yyyy = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(6, 4));
+                //int dd = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(0, 2));
+               // int MM = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(3, 2));
+                //int yyyy = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(6, 4));
                 dTP_NgaySinh.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[2].Value.ToString();
                 txtDChi.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[3].Value.ToString();
                 cmbGioiTinh.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[4].Value.ToString();

@@ -190,6 +190,7 @@
             // 
             // dTP_NgaySinh
             // 
+            this.dTP_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dTP_NgaySinh.Location = new System.Drawing.Point(103, 109);
             this.dTP_NgaySinh.Name = "dTP_NgaySinh";
             this.dTP_NgaySinh.Size = new System.Drawing.Size(163, 20);
