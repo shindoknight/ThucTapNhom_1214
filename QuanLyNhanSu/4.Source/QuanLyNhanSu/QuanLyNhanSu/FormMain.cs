@@ -88,7 +88,7 @@ namespace QuanLyNhanSu
 
         private void TK_Hoten_TextChanged(object sender, EventArgs e)
         {
-            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and TenNV like '%" + TK_Hoten.Text + "%'";
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and TenNV like N'%" + TK_Hoten.Text + "%'";
             dgvNhanVien.DataSource = _con.GetTable(s);
         }
 
@@ -100,7 +100,7 @@ namespace QuanLyNhanSu
 
         private void TK_Diachi_TextChanged(object sender, EventArgs e)
         {
-            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and DChi like '%" + TK_Diachi.Text + "%'";
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and DChi like N'%" + TK_Diachi.Text + "%'";
             dgvNhanVien.DataSource = _con.GetTable(s);
         }
 
@@ -112,7 +112,7 @@ namespace QuanLyNhanSu
 
         private void TK_PhongBan_TextChanged(object sender, EventArgs e)
         {
-            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and Tenpb like '%" + TK_PhongBan.Text + "%'";
+            s = "select MaNV,TenNV,NgaySinh,DChi,Luong,TenPB from NhanVien,PhongBan where NhanVien.MaPB=PhongBan.MaPB and Tenpb like N'%" + TK_PhongBan.Text + "%'";
             dgvNhanVien.DataSource = _con.GetTable(s);
         }
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
