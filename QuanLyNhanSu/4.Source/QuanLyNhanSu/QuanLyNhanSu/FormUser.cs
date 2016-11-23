@@ -134,7 +134,7 @@ namespace QuanLyNhanSu
         private void btnThem_Click(object sender, EventArgs e)
         {
             FormThemUser frmthemuser = new FormThemUser();
-            frmthemuser.Show();
+            frmthemuser.ShowDialog();
         }
     }
 }

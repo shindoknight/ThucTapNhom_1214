@@ -14,185 +14,62 @@ namespace QuanLyNhanSu
     public partial class FormSua1 : Form
     {
         KetNoiCSDL _con = new KetNoiCSDL();
-        SqlDataAdapter daNhanvien = null;
-        DataTable dtNhanvien = null;
+        string manv;
+        int pk;
         public FormSua1()
         {
             InitializeComponent();
         }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        public FormSua1(string m,int n)
         {
-
-        }
-
-        private void btn_Timkiem_Click(object sender, EventArgs e)
-        {
-            if (chk_MaNV.Checked == true)
-            // goi store procedure tim theo ma( nhap vao text)
-            {
-                if (_con.GetTable("select * from NhanVien where MaNV= '" + txt_Timkiem.Text + "' ") != null)
-                {
-                    // MessageBox.Show("Tìm kiếm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
-                    conn.Open();
-                    // đây là đổ dữ liệu vào bảng 
-                    daNhanvien = new SqlDataAdapter("select * from NhanVien where MaNV='" + txt_Timkiem.Text + "'", conn);
-                    dtNhanvien = new DataTable();
-                    dtNhanvien.Clear();
-                    daNhanvien.Fill(dtNhanvien);
-                    dgv_NhanVien.DataSource = dtNhanvien;
-                    dtNhanvien.Dispose();
-                    conn.Close();
-                    dtNhanvien = null;
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-
-
-            if (chk_TenNV.Checked == true)
-            // goi store procedure tim theo ma( nhap vao text)
-            {
-                if (_con.GetTable("select * from NhanVien where TenNV= N'" + txt_Timkiem.Text + "'") != null)
-                {
-                    //MessageBox.Show("Tìm kiếm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
-                    conn.Open();
-                    // đây là đổ dữ liệu vào bảng 
-                    daNhanvien = new SqlDataAdapter("select * from NhanVien where TenNV=N'" + txt_Timkiem.Text + "'", conn);
-                    dtNhanvien = new DataTable();
-                    dtNhanvien.Clear();
-                    daNhanvien.Fill(dtNhanvien);
-                    dgv_NhanVien.DataSource = dtNhanvien;
-                    dtNhanvien.Dispose();
-                    dtNhanvien = null;
-                    conn.Close();
-
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //dgvTimkiem.DataSource = null;
-                }
-            }
-        }
-        public void suaNhanvien(string MaNV, string TenNV, string NgaySinh, string DChi, string GTinh,  string Luong, string MaPB, string SoNVDuoiQuyen, string NgGS)
-        {
-            string a = "dbo.SuaNhanVien";
-            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
-            conn.Open();
-            SqlCommand sqlcmd = new SqlCommand(a, conn);
-            sqlcmd.CommandType = CommandType.StoredProcedure;
-            sqlcmd.Parameters.AddWithValue("@MaNV", MaNV);
-            sqlcmd.Parameters.AddWithValue("@TenNV", TenNV);
-            sqlcmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
-            sqlcmd.Parameters.AddWithValue("@DChi", DChi);
-            sqlcmd.Parameters.AddWithValue("@GTinh", GTinh);
-            sqlcmd.Parameters.AddWithValue("@Luong", int.Parse(Luong));
-            sqlcmd.Parameters.AddWithValue("@MaPB", MaPB);
-            sqlcmd.Parameters.AddWithValue("@SoNVDuoiQuyen", int.Parse(SoNVDuoiQuyen));
-            sqlcmd.Parameters.AddWithValue("@NgGS", NgGS);
-            sqlcmd.ExecuteNonQuery();
-            conn.Dispose();
-            conn.Close();
+            InitializeComponent();
+            manv = m;
+            pk = n;
         }
         private void btn_Sua_Click(object sender, EventArgs e)
         {
             if (txtTenNV.Text == "" ||
                // cmbGioiTinh.Text == "" ||
-                  txtMaNV.Text == "" ||
-                  txtDChi.Text == "" ||
-                  txtLuong.Text == "" ||
-                  txtSoNVDuoiQuyen.Text == "" ||
-                 // txtNgGS.Text == "" ||
-                  dTP_NgaySinh.Text == "" ||
-                  txtMaPB.Text == "")
-                MessageBox.Show(" bạn hãy điền đủ thông tin");
+                cboGioiTinh.Text==""||
+                  cboPB.Text=="" )
+                MessageBox.Show(" Tên,giới tính và phòng ban không được bỏ trống!");
             else
                 if (DialogResult.Yes == MessageBox.Show("Bạn chắc chắn muốn sửa không?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     // gọi đến hàm sửa 
-                    try
-                    {
-                        suaNhanvien(txtMaNV.Text, txtTenNV.Text, dTP_NgaySinh.Text, txtDChi.Text, cmbGioiTinh.Text, txtLuong.Text, txtMaPB.Text, txtSoNVDuoiQuyen.Text, txtNgGS.Text);
-                        MessageBox.Show("Bạn đã sửa thành công");
-                        if (chk_MaNV.Checked == true)
-                        // goi store procedure tim theo ma( nhap vao text)
-                        {
-                                // MessageBox.Show("Tìm kiếm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
-                                conn.Open();
-                                // đây là đổ dữ liệu vào bảng 
-                                daNhanvien = new SqlDataAdapter("select * from NhanVien where MaNV='" + txt_Timkiem.Text + "'", conn);
-                                dtNhanvien = new DataTable();
-                                dtNhanvien.Clear();
-                                daNhanvien.Fill(dtNhanvien);
-                                dgv_NhanVien.DataSource = dtNhanvien;
-                                dtNhanvien.Dispose();
-                                conn.Close();
-                                dtNhanvien = null;
-                        }
-                        if (chk_TenNV.Checked == true)
-                        // goi store procedure tim theo ma( nhap vao text)
-                        {
-                                //MessageBox.Show("Tìm kiếm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
-                                conn.Open();
-                                // đây là đổ dữ liệu vào bảng 
-                                daNhanvien = new SqlDataAdapter("select * from NhanVien where TenNV=N'" + txt_Timkiem.Text + "'", conn);
-                                dtNhanvien = new DataTable();
-                                dtNhanvien.Clear();
-                                daNhanvien.Fill(dtNhanvien);
-                                dgv_NhanVien.DataSource = dtNhanvien;
-                                dtNhanvien.Dispose();
-                                dtNhanvien = null;
-                                conn.Close();
-                        }
-                   }
-                   catch (SqlException ex)
-                   {
-                      MessageBox.Show("Bạn sửa bị lỗi rồi!\n"+ex.ToString());
-                   }
+                        _con.suaNhanvien(txtMaNV.Text, txtTenNV.Text, dTP_NgaySinh.Text, txtDChi.Text, cboGioiTinh.Text, txtLuong.Text, cboPB.Text, cboNgGS.Text);
+                  
                 }
         }
-
-        private void dgv_NhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                int CurrentIndex = dgv_NhanVien.CurrentCell.RowIndex;
-                dgv_NhanVien.Columns[0].DefaultCellStyle.Format = "dd/MM/yyyy";
-                txtMaNV.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[0].Value.ToString();
-                txtTenNV.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[1].Value.ToString();
-                //int dd = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(0, 2));
-               // int MM = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(3, 2));
-                //int yyyy = int.Parse(dgv_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString().Substring(6, 4));
-                dTP_NgaySinh.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[2].Value.ToString();
-                txtDChi.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[3].Value.ToString();
-                cmbGioiTinh.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[4].Value.ToString();
-                //txtGTinh.Text = Convert.ToString(dgv_NhanVien.Rows[CurrentIndex].Cells[4].Value.ToString());
-                txtLuong.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[5].Value.ToString();                
-                txtMaPB.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[6].Value.ToString();
-                txtNgGS.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[7].Value.ToString();
-                txtSoNVDuoiQuyen.Text = dgv_NhanVien.Rows[CurrentIndex].Cells[8].Value.ToString();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Lỗi rồi!\n"+ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormSua1_Load(object sender, EventArgs e)
+        {
+            DataTable dtb = new DataTable();
+            dtb = _con.GetMaPB("select * from PhongBan");
+            cboPB.DataSource = dtb;
+            cboPB.DisplayMember = "TenPB";
+            cboPB.ValueMember = "MaPB";
+            DataTable dtb2 = new DataTable();
+            dtb2 = _con.GetMaPB("select maNV from nhanvien");
+            cboNgGS.DataSource = dtb2;
+            cboNgGS.DisplayMember = "maNV";
+            cboNgGS.ValueMember = "maNV";
+            DataTable dt = new DataTable();
+            dt = _con.GetTable("select * from NhanVien a,phongban b where a.mapb=b.mapb and manv='" + manv + "'");
+            txtMaNV.Text = manv;
+            txtTenNV.Text = dt.Rows[0]["TenNV"].ToString();
+            txtDChi.Text = dt.Rows[0]["DChi"].ToString();
+            txtLuong.Text = dt.Rows[0]["Luong"].ToString();
+            cboPB.Text = dt.Rows[0]["TenPB"].ToString();
+            cboGioiTinh.Text = dt.Rows[0]["GTinh"].ToString();
+            dTP_NgaySinh.Text = dt.Rows[0]["NgaySinh"].ToString();
+            cboNgGS.Text = dt.Rows[0]["NgGS"].ToString();
+            if (pk > 2) btn_Sua.Visible = true;
+            
         }
     }
 }

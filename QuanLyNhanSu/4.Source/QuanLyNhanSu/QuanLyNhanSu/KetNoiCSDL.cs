@@ -51,7 +51,7 @@ namespace QuanLyNhanSu
             return data;
         }
 
-        public DataTable Them_NV(string manhanvien,string hoten,string diachi,string ngay,string luong,string phongban)  
+        public DataTable Them_NV(string manhanvien, string hoten, string diachi, string ngay, string luong, string phongban)
         {
             OpenConnect();
             DataTable dtb = new DataTable();
@@ -67,7 +67,7 @@ namespace QuanLyNhanSu
                 com.Parameters.AddWithValue("@ngaysinh", ngay);
                 com.Parameters.AddWithValue("@luong", luong);
                 com.Parameters.AddWithValue("@phongban", phongban);
-                if(com.ExecuteNonQuery() > 0)
+                if (com.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Thêm thành công");
                 }
@@ -92,7 +92,7 @@ namespace QuanLyNhanSu
             SqlCommand com = new SqlCommand(them, con);
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@manv", manhanvien);
-            if (com.ExecuteNonQuery()>0)
+            if (com.ExecuteNonQuery() > 0)
             {
                 MessageBox.Show("Xóa thành công!");
             }
@@ -100,16 +100,16 @@ namespace QuanLyNhanSu
             {
                 MessageBox.Show("Xóa không thành công!");
             }
- 
+
             CloseConnect();
-         
+
         }
 
         public bool Login(string sql)
         {
             bool b;
             OpenConnect();
-            SqlCommand cmd = new SqlCommand(sql,con);
+            SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataReader re = cmd.ExecuteReader();
             b = re.Read();
             CloseConnect();
@@ -120,7 +120,7 @@ namespace QuanLyNhanSu
             OpenConnect();
             try
             {
-                SqlCommand s = new SqlCommand(sql,con);
+                SqlCommand s = new SqlCommand(sql, con);
                 if (s.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Thành công!");
@@ -133,6 +133,33 @@ namespace QuanLyNhanSu
             catch (Exception e) { MessageBox.Show(e.ToString()); }
             CloseConnect();
         }
+        public void suaNhanvien(string MaNV, string TenNV, string NgaySinh, string DChi, string GTinh, string Luong, string MaPB, string NgGS)
+        {
+            string a = "dbo.SuaNhanVien";
 
+            OpenConnect();
+            SqlCommand sqlcmd = new SqlCommand(a, con);
+            sqlcmd.CommandType = CommandType.StoredProcedure;
+            sqlcmd.Parameters.AddWithValue("@MaNV", MaNV);
+            sqlcmd.Parameters.AddWithValue("@TenNV", TenNV);
+            sqlcmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            sqlcmd.Parameters.AddWithValue("@DChi", DChi);
+            sqlcmd.Parameters.AddWithValue("@GTinh", GTinh);
+            sqlcmd.Parameters.AddWithValue("@Luong", int.Parse(Luong));
+            sqlcmd.Parameters.AddWithValue("@TenPB", MaPB);
+            sqlcmd.Parameters.AddWithValue("@NgGS", NgGS);
+            try {
+                if(sqlcmd.ExecuteNonQuery()>0)
+                MessageBox.Show("Bạn đã sửa thành công");
+                else
+                    MessageBox.Show("Bạn sửa không thành công");
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Lỗi\n" + e.ToString());
+            }
+            
+            CloseConnect();
+        }
     }
 }

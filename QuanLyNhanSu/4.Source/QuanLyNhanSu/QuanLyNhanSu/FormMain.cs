@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace QuanLyNhanSu
 {
     public partial class FormMain : Form
     {
         KetNoiCSDL _con = new KetNoiCSDL();
-        FormThem frmThem = new FormThem();
+        
         string strID;
         string s;
         int capdo;
@@ -46,6 +47,7 @@ namespace QuanLyNhanSu
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormThem frmThem = new FormThem();
            // this.Hide();
             frmThem.ShowDialog();
         }
@@ -117,9 +119,11 @@ namespace QuanLyNhanSu
         }
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormSua1 frmForm_Sua = new FormSua1();
+            string str = dgvNhanVien.CurrentRow.Cells["clmMaNV"].Value.ToString();
+            FormSua1 frmSua = new FormSua1(str,capdo);
+            frmSua.ShowDialog();
             //  this.Close();
-            frmForm_Sua.Show();
+           
         }
 
         private void cậpNhậtDữLiệuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,7 +147,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                dgvNhanVien.CurrentCell.Selected = true;
+                dgvNhanVien.CurrentRow.Selected = true;
             }
             catch { }
         }
@@ -151,6 +155,11 @@ namespace QuanLyNhanSu
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             menuxoa.Enabled = true;
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(Application.StartupPath + "\\Help.pdf");
         }
     }
 }
