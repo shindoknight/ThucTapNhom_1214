@@ -225,7 +225,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
             this.Name = "FormThemUser";
-            this.Text = "FormThemUser";
+            this.Text = "Thêm Người dùng";
             this.ResumeLayout(false);
             this.PerformLayout();
 
